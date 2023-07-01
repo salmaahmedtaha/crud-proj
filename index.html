@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crud</title>
+    <link rel="stylesheet" href="css/all.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container ">
+    <FORM class="my-5">
+        <div class=" row">
+<div class="col-6">
+            <div class="my-3  ">
+                <label for="productName">Product Name</label>
+                <input type="text" class="form-control " id="productName">
+            </div>
+            <div class="my-3">
+                <label for="productPrice">Product Price</label>
+                <input type="number" class="form-control " id="productPrice">
+            </div>
+        
+        </div>
+        <div class="col-6">
+        <div class="my-3">
+            <label for="productCategory">Product Category</label>
+            <select name="productCategory" id="productCategory" class="form-select">
+                <option value="tv">TV</option>
+                <option value="mopile">Mopile</option>
+                <option value="labtop">Laptop</option>
+            </select>
+        </div>
+        <div class="my-3">
+            <label for="productDescription">Product Description</label>
+           <textarea name="productDescription" id="productDescription" class="form-control"></textarea>
+        </div>
+    </div>
+    
+    </div>
+        <button class="btn btn-outline-success" type="button" onclick="addProduct()" id="add">Add Product</button>
+        <button class="btn btn-outline-success " type="button" onclick="editproduct()" style="display: none;" id="edit">Edit Product</button>
+        <button class="btn btn-outline-danger " type="button" onclick="clearForm()">Clear Form</button>
+    </FORM>
+    
+    </div>
+    
+   <div class="container">
+<input type="text" class="form-control w-50 mx-auto my-5" placeholder="Search..........." id="inputSearch" onkeyup="search()">
+    
+<table class="table align-middletext-center">
+
+    <thead>
+        <tr>
+            <th>Index</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Product Category</th>
+            <th>Product Description</th>
+            <th>
+                    update
+               
+            </th>
+            <th>
+                    Delete
+            </th>
+        </tr>
+    </thead>
+<tbody id="tableBody">
+   
+   
+</tbody>
+
+</table>
+
+   </div>
+
+
+    <script src="main.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
